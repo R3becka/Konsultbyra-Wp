@@ -30,6 +30,135 @@ function konsultbyra_scripts() {
 }
 add_action('wp_enqueue_scripts', 'konsultbyra_scripts');
 
+// Add Custom Fields support for team images on About page
+function add_team_image_fields() {
+    // Add meta box to About page for team images
+    add_meta_box(
+        'team_images',
+        'Team Member Images',
+        'team_images_meta_box',
+        'page',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'add_team_image_fields');
+
+// Meta box callback for team images
+function team_images_meta_box($post) {
+    // Check if this is the About page
+    if (get_post_meta($post->ID, '_wp_page_template', true) !== 'page-about.php') {
+        echo '<p>This meta box is only available on the About page.</p>';
+        return;
+    }
+
+    // Add nonce field
+    wp_nonce_field('team_images_nonce', 'team_images_nonce');
+
+    // Team members array
+    $team_members = array(
+        'emma_kronkvist' => 'Emma Kronkvist',
+        'natthasuda_suksod' => 'Natthasuda Suksod',
+        'nazret_mengstu' => 'Nazret Tluk Mengstu',
+        'martinique_lindberg' => 'Martinique Rockström Lindberg',
+        'nicolina_savmarker' => 'Nicolina Sävmarker',
+        'rebecka_hellqvist' => 'Rebecka Hellqvist'
+    );
+
+    echo '<table class="form-table">';
+    foreach ($team_members as $key => $name) {
+        $image_id = get_post_meta($post->ID, 'team_image_' . $key, true);
+        $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'thumbnail') : '';
+
+        echo '<tr>';
+        echo '<th scope="row"><label>' . $name . '</label></th>';
+        echo '<td>';
+        echo '<div class="team-image-upload">';
+        echo '<input type="hidden" name="team_image_' . $key . '" id="team_image_' . $key . '" value="' . $image_id . '">';
+        echo '<div class="team-image-preview" style="margin-bottom: 10px;">';
+        if ($image_url) {
+            echo '<img src="' . $image_url . '" style="max-width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">';
+        } else {
+            echo '<div style="width: 100px; height: 100px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #666;">No Image</div>';
+        }
+        echo '</div>';
+        echo '<button type="button" class="button team-image-upload-btn" data-target="team_image_' . $key . '">Upload Image</button> ';
+        echo '<button type="button" class="button team-image-remove-btn" data-target="team_image_' . $key . '">Remove Image</button>';
+        echo '</div>';
+        echo '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+
+    // Add JavaScript for media uploader
+    echo '<script>
+    jQuery(document).ready(function($) {
+        var mediaUploader;
+
+        $(".team-image-upload-btn").click(function(e) {
+            e.preventDefault();
+            var targetInput = $(this).data("target");
+            var button = $(this);
+            var preview = button.siblings(".team-image-preview");
+
+            if (mediaUploader) {
+                mediaUploader.open();
+                return;
+            }
+
+            mediaUploader = wp.media({
+                title: "Select Team Member Image",
+                button: {
+                    text: "Use this image"
+                },
+                multiple: false
+            });
+
+            mediaUploader.on("select", function() {
+                var attachment = mediaUploader.state().get("selection").first().toJSON();
+                $("#" + targetInput).val(attachment.id);
+                preview.html("<img src=\"" + attachment.sizes.thumbnail.url + "\" style=\"max-width: 100px; height: 100px; object-fit: cover; border-radius: 50%;\">");
+            });
+
+            mediaUploader.open();
+        });
+
+        $(".team-image-remove-btn").click(function(e) {
+            e.preventDefault();
+            var targetInput = $(this).data("target");
+            var preview = $(this).siblings(".team-image-preview");
+
+            $("#" + targetInput).val("");
+            preview.html("<div style=\"width: 100px; height: 100px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #666;\">No Image</div>");
+        });
+    });
+    </script>';
+}
+
+// Save team image meta data
+function save_team_images($post_id) {
+    // Check nonce
+    if (!isset($_POST['team_images_nonce']) || !wp_verify_nonce($_POST['team_images_nonce'], 'team_images_nonce')) {
+        return;
+    }
+
+    // Check if user has permission
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Save team images
+    $team_members = array('emma_kronkvist', 'natthasuda_suksod', 'nazret_mengstu', 'martinique_lindberg', 'nicolina_savmarker', 'rebecka_hellqvist');
+
+    foreach ($team_members as $member) {
+        $field_name = 'team_image_' . $member;
+        if (isset($_POST[$field_name])) {
+            update_post_meta($post_id, $field_name, sanitize_text_field($_POST[$field_name]));
+        }
+    }
+}
+add_action('save_post', 'save_team_images');
+
 // Custom post types and fields can be added here
 function create_custom_post_types() {
     // Services post type

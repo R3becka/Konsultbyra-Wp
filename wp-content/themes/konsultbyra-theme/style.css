@@ -37,6 +37,40 @@ body {
     padding: 0 20px;
 }
 
+/* Team Member Photo Styling */
+.team-member-photo {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.team-member-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.team-member-photo img {
+    transition: all 0.3s ease;
+    /* Additional fallback positioning options */
+    object-position: center 20%;
+}
+
+.team-member-photo img:hover {
+    opacity: 0.95;
+}
+
+/* Alternative positioning classes for specific team members if needed */
+.team-member-photo.position-top img {
+    object-position: center top;
+}
+
+.team-member-photo.position-center img {
+    object-position: center center;
+}
+
+.team-member-photo.position-upper img {
+    object-position: center 25%;
+}
+
 /* Header */
 .site-header {
     background: var(--white);

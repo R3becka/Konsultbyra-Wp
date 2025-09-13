@@ -56,86 +56,99 @@ get_header(); ?>
     <section style="padding: 6rem 0; background: var(--gray-100);">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 4rem; color: var(--text-dark); font-size: 2.5rem;">Vårt team</h2>
-            
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-                <!-- Team Member 1 -->
-                <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--primary-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">AL</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Anna Lindberg</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">Lead Data Scientist & AI Strategist</p>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        8 års erfarenhet från Google och Spotify. Expert på machine learning, predictive analytics och AI-implementation i stor skala.
-                    </p>
-                    <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> AI/ML, Python, TensorFlow, Advanced Analytics
-                    </div>
-                </div>
+            <?php
+            // Team members data with custom field keys
+            $team_members = array(
+                array(
+                    'key' => 'emma_kronkvist',
+                    'initials' => 'EK',
+                    'name' => 'Emma Kronkvist',
+                    'title' => 'Lead Customer Data Platform Specialist',
+                    'description' => 'Expert på CDP-implementation och dataarkitektur. Specialiserad på att bygga robusta kunddata-plattformar som förenar data från alla touchpoints och säkerställer GDPR-compliance.',
+                    'expertise' => 'CDP, Data Architecture, GDPR, Customer Journey Analytics',
+                    'bg_color' => 'var(--primary-blue)'
+                ),
+                array(
+                    'key' => 'natthasuda_suksod',
+                    'initials' => 'NS',
+                    'name' => 'Natthasuda Suksod',
+                    'title' => 'Marketing Automation & CRM Consultant',
+                    'description' => 'Teknisk strateg inom marketing automation och CRM-system. Expert på att designa automatiserade kundresor som konverterar och bygger långsiktiga kundrelationer.',
+                    'expertise' => 'Marketing Automation, CRM Development, Lead Nurturing',
+                    'bg_color' => 'var(--secondary-blue)'
+                ),
+                array(
+                    'key' => 'nazret_mengstu',
+                    'initials' => 'NM',
+                    'name' => 'Nazret Tluk Mengstu',
+                    'title' => 'GA4 & Analytics Implementation Expert',
+                    'description' => 'Specialist på GA4-implementationer och avancerad analytics-konfiguration. Förvandlar komplexa tracking-krav till precision-datainsamling som driver affärsbeslut.',
+                    'expertise' => 'GA4, Google Tag Manager, Conversion Tracking, Event Architecture',
+                    'bg_color' => 'var(--accent-blue)'
+                ),
+                array(
+                    'key' => 'martinique_lindberg',
+                    'initials' => 'ML',
+                    'name' => 'Martinique Rockström Lindberg',
+                    'title' => 'Data Visualization & Looker Specialist',
+                    'description' => 'Förvandlar komplex data till kraftfulla visuella berättelser. Expert på Looker Studio och Business Intelligence som gör data tillgänglig för alla i organisationen.',
+                    'expertise' => 'Looker Studio, Data Visualization, BI Development, Dashboard Design',
+                    'bg_color' => 'var(--dark-blue)'
+                ),
+                array(
+                    'key' => 'nicolina_savmarker',
+                    'initials' => 'NS',
+                    'name' => 'Nicolina Sävmarker',
+                    'title' => 'E-commerce Data & Performance Optimization Consultant',
+                    'description' => 'E-commerce analytics expert med fokus på conversion rate optimization. Specialiserad på att optimera hela customer journey från första intryck till återköp.',
+                    'expertise' => 'E-commerce Analytics, CRO, Customer Lifetime Value, Retention Analysis',
+                    'bg_color' => 'var(--primary-blue)'
+                ),
+                array(
+                    'key' => 'rebecka_hellqvist',
+                    'initials' => 'RH',
+                    'name' => 'Rebecka Hellqvist',
+                    'title' => 'AI-Driven Advertising & Performance Marketing Specialist',
+                    'description' => 'Performance marketing expert med djup kunskap inom AI-driven kampanjoptimering. Specialiserad på att maximera ROAS genom intelligent automation och avancerad attribution modeling.',
+                    'expertise' => 'Google Ads Automation, Meta Ads, AI Campaign Optimization, Attribution Modeling',
+                    'bg_color' => 'var(--secondary-blue)'
+                )
+            );
 
-                <!-- Team Member 2 -->
-                <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--secondary-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">MK</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Marcus Karlsson</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">Senior Integration Specialist</p>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Teknisk lead med fokus på marketing technology stack. Har byggt integrationslösningar för 100+ företag.
-                    </p>
-                    <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> GTM, GA4, CRM, Marketing Automation
-                    </div>
-                </div>
+            foreach ($team_members as $member):
+                // Get uploaded image for this team member
+                $image_id = get_post_meta(get_the_ID(), 'team_image_' . $member['key'], true);
+                $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'medium') : '';
 
-                <!-- Team Member 3 -->
+                // Special positioning class for Rebecka's photo if needed
+                $position_class = ($member['key'] === 'rebecka_hellqvist') ? 'position-upper' : '';
+            ?>
+                <!-- Team Member: <?php echo $member['name']; ?> -->
                 <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--accent-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">SP</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Sofia Pettersson</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">Data Visualization Expert</p>
+                    <div class="team-member-photo <?php echo $position_class; ?>" style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                        <?php if ($image_url): ?>
+                            <img src="<?php echo esc_url($image_url); ?>"
+                                 alt="<?php echo esc_attr($member['name']); ?>"
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        <?php else: ?>
+                            <div style="width: 100%; height: 100%; background: <?php echo $member['bg_color']; ?>; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2rem; font-weight: bold;">
+                                <?php echo $member['initials']; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;"><?php echo $member['name']; ?></h3>
+                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;"><?php echo $member['title']; ?></p>
                     <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Förvandlar komplex data till tydliga insights. Expert på Looker, Tableau och custom dashboard-lösningar.
+                        <?php echo $member['description']; ?>
                     </p>
                     <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> Looker, Data Viz, Dashboard Design, BI
+                        <strong>Expertområden:</strong> <?php echo $member['expertise']; ?>
                     </div>
                 </div>
-
-                <!-- Team Member 4 -->
-                <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--dark-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">JH</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Johan Hansson</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">E-commerce & Conversion Specialist</p>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Shopify Plus expert som optimerat över 200 webshops. Specialiserad på conversion rate optimization och AI-driven personalisering.
-                    </p>
-                    <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> Shopify Plus, CRO, A/B-testing, E-commerce Analytics
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--primary-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">EW</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Emma Wallin</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">Marketing Technology Consultant</p>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Strateg inom marketing automation med djup förståelse för customer journey mapping och lead nurturing.
-                    </p>
-                    <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> Marketing Automation, CRM Strategy, Lead Generation
-                    </div>
-                </div>
-
-                <!-- Team Member 6 -->
-                <div style="background: var(--white); border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="width: 100px; height: 100px; background: var(--secondary-blue); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">DA</div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">David Andersson</h3>
-                    <p style="color: var(--secondary-blue); font-weight: 600; margin-bottom: 1rem;">Performance Marketing & AI Ads Specialist</p>
-                    <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Google Ads och Facebook Ads expert med fokus på AI-driven kampanjoptimering och advanced attribution modeling.
-                    </p>
-                    <div style="color: var(--text-light); font-size: 0.9rem;">
-                        <strong>Expertområden:</strong> Google Ads, Meta Ads, Smart Bidding, Attribution
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
+        </div>
         </div>
     </section>
 
