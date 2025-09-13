@@ -116,7 +116,7 @@ get_header(); ?>
                         
                         <div style="margin-bottom: 2rem;">
                             <h4 style="color: var(--text-dark); margin-bottom: 0.5rem;">📧 E-post</h4>
-                            <p style="color: var(--text-light);">hej@dataai-konsult.se</p>
+                            <p style="color: var(--text-light);">hej@clearstack.se</p>
                         </div>
 
                         <div style="margin-bottom: 2rem;">

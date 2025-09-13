@@ -13,7 +13,7 @@
         </div>
         
         <div class="copyright">
-            <p>&copy; <?php echo date('Y'); ?> DataAI Konsult. Alla rättigheter förbehållna.</p>
+            <p>&copy; <?php echo date('Y'); ?> ClearStack Konsultbyrå. Alla rättigheter förbehållna.</p>
         </div>
     </div>
 </footer>

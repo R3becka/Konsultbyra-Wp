@@ -464,7 +464,7 @@ function konsultbyra_admin_notice() {
     $screen = get_current_screen();
     if (!get_option('konsultbyra_setup_complete') && current_user_can('manage_options')) {
         echo '<div class="notice notice-success is-dismissible">';
-        echo '<p><strong>🎉 DataAI Konsult Theme Activated!</strong></p>';
+        echo '<p><strong>🎉 ClearStack Konsultbyrå Theme Activated!</strong></p>';
         echo '<p>Your consultancy website content will be set up automatically. ';
         echo '<a href="' . home_url() . '" target="_blank">View your website</a> or ';
         echo '<a href="' . admin_url('admin.php?page=konsultbyra-setup') . '">manually run setup</a> if needed.</p>';
@@ -479,7 +479,7 @@ add_action('admin_notices', 'konsultbyra_admin_notice');
 // Add simple admin page for manual setup
 function konsultbyra_admin_menu() {
     add_theme_page(
-        'DataAI Konsult Setup',
+        'ClearStack Konsultbyrå Setup',
         'Website Setup',
         'manage_options',
         'konsultbyra-setup',
@@ -491,7 +491,7 @@ add_action('admin_menu', 'konsultbyra_admin_menu');
 // Setup page content
 function konsultbyra_setup_page() {
     echo '<div class="wrap">';
-    echo '<h1>🚀 DataAI Konsult Website Setup</h1>';
+    echo '<h1>🚀 ClearStack Konsultbyrå Website Setup</h1>';
     
     // Check if setup action was triggered
     if (isset($_POST['run_setup']) || isset($_GET['action']) && $_GET['action'] === 'setup_now') {
@@ -512,7 +512,7 @@ function konsultbyra_setup_page() {
     
     if (get_option('konsultbyra_setup_complete')) {
         echo '<div class="notice notice-success"><p><strong>✅ Your website is already set up!</strong></p></div>';
-        echo '<h2>Your DataAI Konsult Website</h2>';
+        echo '<h2>Your ClearStack Konsultbyrå Website</h2>';
         echo '<p>All pages, menus, and content have been created.</p>';
         echo '<ul>';
         echo '<li>🏠 <strong>Homepage:</strong> Hero section with company messaging</li>';
@@ -557,7 +557,7 @@ function konsultbyra_setup_page() {
 
 // Enhanced content creation with logging
 function konsultbyra_create_all_content_with_log() {
-    echo "🚀 Starting DataAI Konsult website setup...\n\n";
+    echo "🚀 Starting ClearStack Konsultbyrå website setup...\n\n";
     
     // Set up basic WordPress settings first
     update_option('blogdescription', 'Vi hjälper företag att bli datadrivna med AI som assistent');

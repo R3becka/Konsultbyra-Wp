@@ -140,7 +140,7 @@ get_header(); ?>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
                 <div style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; font-style: italic; color: var(--text-dark);">"DataAI Konsult förvandlade vårt sätt att förstå kunder. Nu vet vi exakt vilka insatser som driver resultat. Det här är inte bara konsultation – det är transformation."</p>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; font-style: italic; color: var(--text-dark);">"ClearStack Konsultbyrå förvandlade vårt sätt att förstå kunder. Nu vet vi exakt vilka insatser som driver resultat. Det här är inte bara konsultation – det är transformation."</p>
                     <div style="display: flex; align-items: center;">
                         <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">AS</div>
                         <div>

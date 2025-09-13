@@ -15,7 +15,7 @@
     <div class="container">
         <div class="header-content">
             <a href="<?php echo home_url(); ?>" class="logo">
-                DataAI Konsult
+                ClearStack Konsultbyrå
             </a>
             
             <nav class="main-nav">

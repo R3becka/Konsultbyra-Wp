@@ -7,7 +7,7 @@ get_header(); ?>
 <main id="main" class="site-main">
     <section class="hero">
         <div class="container">
-            <h1>Om DataAI Konsult</h1>
+            <h1>Om ClearStack Konsultbyrå</h1>
             <p>Vi är specialister på att göra data användbart och AI tillgängligt för svenska företag</p>
         </div>
     </section>
@@ -19,32 +19,32 @@ get_header(); ?>
                 <div>
                     <h2 style="color: var(--primary-blue); margin-bottom: 2rem; font-size: 2.5rem;">Vår story</h2>
                     <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-dark);">
-                        DataAI Konsult grundades 2022 av ett team erfarna data scientists och marketing technologists som såg ett gap på marknaden. Svenska företag hade tillgång till fantastisk data men saknade verktyg och kunskap för att använda den strategiskt.
+                        Vi är specialister som träffades genom avancerad datateknisk utbildning och upptäckte en gemensam vision: AI förändrar fundamentalt hur företag hanterar data. Medan andra såg AI som framtidsteknologi, insåg vi att transformationen redan var igång.
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-dark);">
-                        Vi insåg att AI inte bara var en teknik för framtiden – det var något som kunde skapa omedelbar value för företag redan idag. Men bara om det implementerades rätt.
+                        Vår expertis ligger i att förstå teknologisk evolution över tid. Vi ser hur företag utvecklas från traditionella dataverktyg till AI-förstärkta system – en resa som typiskt sträcker sig över 6-30 månader. Från AI-assisterad analys och automation till fullt integrerade AI-drivna tech stacks.
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-dark);">
-                        Sedan dess har vi hjälpt över 50 svenska företag att förvandla sin data till konkurrensfördelar och använda AI för att automatisera och optimera sina processer.
+                        ClearStack Konsultbyrå grundades för att hjälpa svenska företag navigera denna teknologiska transformation. Vi kombinerar beprövade verktyg som GTM, GA4 och CRM-system med framväxande AI-kapaciteter, och implementerar aktivt AI-lösningar och systemintegrationer för våra klienter.
                     </p>
                 </div>
                 <div style="background: var(--light-blue); padding: 3rem; border-radius: 12px; text-align: center;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                         <div>
-                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">50+</div>
-                            <div style="color: var(--text-dark);">Nöjda kunder</div>
+                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">6-30</div>
+                            <div style="color: var(--text-dark);">Månaders transformation</div>
                         </div>
                         <div>
-                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">2M+</div>
-                            <div style="color: var(--text-dark);">Datapunkter analyserade</div>
+                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">15+</div>
+                            <div style="color: var(--text-dark);">AI-integrationer</div>
                         </div>
                         <div>
-                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">180%</div>
-                            <div style="color: var(--text-dark);">Avg ROI increase</div>
+                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">200%</div>
+                            <div style="color: var(--text-dark);">Dataeffektivitet</div>
                         </div>
                         <div>
-                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">24/7</div>
-                            <div style="color: var(--text-dark);">AI-system igång</div>
+                            <div style="font-size: 3rem; font-weight: bold; color: var(--primary-blue); margin-bottom: 0.5rem;">100+</div>
+                            <div style="color: var(--text-dark);">System migrationer</div>
                         </div>
                     </div>
                 </div>
