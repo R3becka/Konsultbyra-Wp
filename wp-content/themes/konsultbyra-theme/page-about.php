@@ -17,7 +17,7 @@ get_header(); ?>
         <div class="container">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div>
-                    <h2 style="color: var(--primary-blue); margin-bottom: 2rem; font-size: 2.5rem;">Vår story</h2>
+                    <h2 style="color: var(--primary-blue); margin-bottom: 2rem; font-size: 2.5rem;">Vår bakgrund</h2>
                     <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-dark);">
                         Vi är specialister som träffades genom avancerad datateknisk utbildning och upptäckte en gemensam vision: AI förändrar fundamentalt hur företag hanterar data. Medan andra såg AI som framtidsteknologi, insåg vi att transformationen redan var igång.
                     </p>

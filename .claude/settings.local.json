@@ -13,7 +13,8 @@
       "WebSearch",
       "WebFetch(domain:www.ihm.se)",
       "Bash(git config:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
