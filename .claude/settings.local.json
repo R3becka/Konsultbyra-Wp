@@ -11,7 +11,9 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "WebSearch",
-      "WebFetch(domain:www.ihm.se)"
+      "WebFetch(domain:www.ihm.se)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)"
     ],
     "deny": [],
     "ask": []
