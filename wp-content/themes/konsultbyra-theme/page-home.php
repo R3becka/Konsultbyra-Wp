@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="container">
             <h1>Vi hjälper företag att bli datadrivna – med AI som assistent</h1>
             <p>Genom smart datainsamling, kraftfull analys och AI-driven automatisering hjälper vi er att fatta bättre beslut och växa snabbare.</p>
-            <a href="<?php echo home_url('/tjanster'); ?>" class="cta-button">Läs mer om våra tjänster</a>
+            <a href="<?php echo home_url('/?page_id=13'); ?>" class="cta-button">Läs mer om våra tjänster</a>
         </div>
     </section>
 
