@@ -8,7 +8,7 @@ get_header(); ?>
     <section class="hero">
         <div class="container">
             <h1>Våra tjänster</h1>
-            <p>Vi erbjuder heltäckande datalösningar som hjälper er att samla in, analysera och använda data för att växa</p>
+            <p>Vi erbjuder både heltäckande datalösningar och specifika implementationer som skräddarsys efter ert företags behov. Från enkla integrationslösningar till kompletta datastrategier - vi anpassar våra tjänster så ni får exakt den hjälp ni behöver för att växa.</p>
         </div>
     </section>
 
