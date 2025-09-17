@@ -31,7 +31,7 @@ get_header(); ?>
                 <div class="service-card">
                     <h3>Analys & Visualisering (GA4 + Looker)</h3>
                     <p><strong>Vi förvandlar er data till tydliga insikter som driver tillväxt</strong></p>
-                    <p>Slut med Excel-tabeller som ingen förstår. Vi bygger visuella dashboards i Google Looker Studio som gör er data begriplig för hela teamet. Ni får automatiska rapporter som visar exakt vilka marknadsföringskanaler som ger bäst ROI, vilka produkter som säljer bäst, och var era kunder kommer ifrån. Perfekt för start-ups som behöver fatta snabba, datadrivna beslut utan att anställa en hel analysavdelning.</p>
+                    <p>Vi bygger tydliga dashboards som gör er data begriplig för hela teamet. Ni får automatiska rapporter som visar vilka marknadsföringskanaler som ger bäst ROI och var era bästa kunder kommer ifrån. Perfekt för att fatta snabba, datadrivna beslut.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-light);">
                         <li>Tydliga dashboards som alla kan förstå - ingen teknisk bakgrund krävs</li>
                         <li>Automatiska vecko- och månadsrapporter via email</li>
@@ -74,7 +74,7 @@ get_header(); ?>
                 <div class="service-card">
                     <h3>E-handel</h3>
                     <p><strong>Vi förvandlar er webshop till en försäljningsmaskin som aldrig sover</strong></p>
-                    <p>Era besökare kommer till er webshop, men hur många köper egentligen? Vi hjälper er förstå exakt var ni tappar kunder i köpprocessen och fixar problemen. Genom smart analys och A/B-testning ökar vi er konverteringsgrad så att fler besökare blir betalande kunder. Vi spårar allt från första klick till återköp, så ni vet vilka produkter som säljer bäst och vilka kunder som är mest värdefulla. Perfekt för e-handlare som vill växa utan att bara köpa mer trafik.</p>
+                    <p>Vi hjälper er förstå var ni tappar kunder i köpprocessen och fixar problemen. Genom smart analys och A/B-testning ökar vi er konverteringsgrad så fler besökare blir betalande kunder. Ni får full koll på vilka produkter som säljer bäst och vilka kunder som är mest värdefulla.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-light);">
                         <li>Konverteringsanalys som visar exakt var ni förlorar kunder</li>
                         <li>A/B-testning av produktsidor, checkout och kampanjer</li>
