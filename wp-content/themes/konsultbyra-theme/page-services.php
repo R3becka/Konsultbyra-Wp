@@ -8,7 +8,7 @@ get_header(); ?>
     <section class="hero">
         <div class="container">
             <h1>Våra tjänster</h1>
-            <p>Vi erbjuder heltäckande datalösningar som hjälper er att samla in, analysera och använda data för att växa</p>
+            <p>Vi erbjuder både heltäckande datalösningar och specifika implementationer som skräddarsys efter ert företags behov. Från enkla integrationslösningar till kompletta datastrategier - vi anpassar våra tjänster så ni får exakt den hjälp ni behöver för att växa.</p>
         </div>
     </section>
 
@@ -30,13 +30,16 @@ get_header(); ?>
 
                 <div class="service-card">
                     <h3>Analys & Visualisering (GA4 + Looker)</h3>
-                    <p><strong>Vi gör datan begriplig med dashboards</strong></p>
-                    <p>Kraftfulla dashboards i Google Looker som förvandlar rådata till actionable insights. Ni får tydliga visualiseringar som driver bättre beslut.</p>
+                    <p><strong>Vi förvandlar er data till tydliga insikter som driver tillväxt</strong></p>
+                    <p>Vi bygger tydliga dashboards som gör er data begriplig för hela teamet. Ni får automatiska rapporter som visar vilka marknadsföringskanaler som ger bäst ROI och var era bästa kunder kommer ifrån. Perfekt för att fatta snabba, datadrivna beslut.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-light);">
-                        <li>GA4 advanced configuration</li>
-                        <li>Custom Looker dashboards</li>
-                        <li>Automated reporting</li>
-                        <li>Data modeling och transformation</li>
+                        <li>Tydliga dashboards som alla kan förstå - ingen teknisk bakgrund krävs</li>
+                        <li>Automatiska vecko- och månadsrapporter via email</li>
+                        <li>Realtidsövervakning av er webbplats och försäljning</li>
+                        <li>ROI-analys per marknadsföringskanal</li>
+                        <li>Kundsegmentering baserat på beteende och värde</li>
+                        <li>Prognoser som hjälper er planera framtiden</li>
+                        <li>Mobile-anpassade rapporter ni kan kolla varsomhelst</li>
                     </ul>
                 </div>
 
@@ -70,13 +73,16 @@ get_header(); ?>
 
                 <div class="service-card">
                     <h3>E-handel</h3>
-                    <p><strong>Vi hjälper dig mäta och optimera konverteringen i din webshop</strong></p>
-                    <p>E-handelslösningar som fokuserar på konvertering. Från Shopify-optimering till avancerad produktanalys som ökar er försäljning.</p>
+                    <p><strong>Vi förvandlar er webshop till en försäljningsmaskin som aldrig sover</strong></p>
+                    <p>Vi hjälper er förstå var ni tappar kunder i köpprocessen och fixar problemen. Genom smart analys och A/B-testning ökar vi er konverteringsgrad så fler besökare blir betalande kunder. Ni får full koll på vilka produkter som säljer bäst och vilka kunder som är mest värdefulla.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-light);">
-                        <li>Shopify Plus implementation</li>
-                        <li>Conversion rate optimization</li>
-                        <li>Product performance analysis</li>
-                        <li>Customer lifetime value tracking</li>
+                        <li>Konverteringsanalys som visar exakt var ni förlorar kunder</li>
+                        <li>A/B-testning av produktsidor, checkout och kampanjer</li>
+                        <li>Kundvärdesanalys - vilka kunder är mest lönsamma?</li>
+                        <li>Automatisk spårning av produktprestanda och lageroptimering</li>
+                        <li>Återköpsanalys som identifierar era bästa återkommande kunder</li>
+                        <li>Integration med era marknadsföringskanaler för helhetsbild</li>
+                        <li>Mobile-optimering baserat på kunddata</li>
                     </ul>
                 </div>
 
