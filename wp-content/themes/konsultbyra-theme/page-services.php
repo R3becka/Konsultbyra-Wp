@@ -103,7 +103,7 @@ get_header(); ?>
         <div class="container">
             <h2>Redo att komma igång?</h2>
             <p>Låt oss hjälpa er att bli mer datadrivna. Boka ett kostnadsfritt konsultmöte redan idag.</p>
-            <a href="<?php echo home_url('/kontakt'); ?>" class="cta-button" style="background: var(--white); color: var(--dark-blue); margin-top: 2rem;">Boka ett möte</a>
+            <a href="<?php echo home_url('/?page_id=17'); ?>" class="cta-button" style="background: var(--white); color: var(--dark-blue); margin-top: 2rem;">Boka ett möte</a>
         </div>
     </section>
 </main>
