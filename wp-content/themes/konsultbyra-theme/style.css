@@ -572,7 +572,20 @@ main {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
-    
+}
+
+/* Case Study Vertical Alignment */
+.case-study div[style*="background: var(--primary-blue)"],
+.case-study div[style*="background: var(--secondary-blue)"] {
+    margin-top: 8.5rem;
+}
+
+@media (max-width: 768px) {
+    .case-study div[style*="background: var(--primary-blue)"],
+    .case-study div[style*="background: var(--secondary-blue)"] {
+        margin-top: 0;
+    }
+
     /* About page team grid responsive */
     section[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] > div {
         grid-template-columns: 1fr !important;
