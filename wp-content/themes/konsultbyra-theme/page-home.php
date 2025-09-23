@@ -40,29 +40,72 @@ get_header(); ?>
         <div class="container">
             <h2>Teknologier vi använder</h2>
             <div class="tech-icons">
+                <!-- Row 1 -->
                 <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #4285f4; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">GTM</div>
-                    <p>Google Tag Manager</p>
+                    <div class="tech-badge analytics">ANALYTICS</div>
+                    <p>Google Tag<br>Manager</p>
                 </div>
                 <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #ff6f00; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">GA4</div>
-                    <p>Google Analytics 4</p>
-                </div>
-                <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #4285f4; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">LKR</div>
-                    <p>Google Looker</p>
-                </div>
-                <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #0056b3; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CRM</div>
-                    <p>CRM Systems</p>
-                </div>
-                <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #96bf47; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">SHP</div>
+                    <div class="tech-badge platforms">PLATFORMS</div>
                     <p>Shopify</p>
                 </div>
                 <div class="tech-icon">
-                    <div style="width: 50px; height: 50px; background: #1877f2; margin: 0 auto 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">ADS</div>
-                    <p>Advertising Platforms</p>
+                    <div class="tech-badge ai-automation">AI AUTOMATION</div>
+                    <p>Claude Code<br>& API</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge marketing">MARKETING</div>
+                    <p>Advertising<br>Platforms</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge analytics">ANALYTICS</div>
+                    <p>Google<br>Analytics 4</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge platforms">PLATFORMS</div>
+                    <p>HubSpot<br>AI Tools</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge ai-automation">AI AUTOMATION</div>
+                    <p>ChatGPT<br>& GPT API</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge marketing">MARKETING</div>
+                    <p>Midjourney AI<br>Image Generation</p>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="tech-icon">
+                    <div class="tech-badge analytics">ANALYTICS</div>
+                    <p>Google Looker</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge platforms">PLATFORMS</div>
+                    <p>CRM Systems</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge ai-automation">AI AUTOMATION</div>
+                    <p>Microsoft<br>Copilot</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge marketing">MARKETING</div>
+                    <p>Canva AI<br>Design Tools</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge analytics">ANALYTICS</div>
+                    <p>Tableau AI<br>Analytics</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge ai-automation">AI AUTOMATION</div>
+                    <p>Zapier AI<br>Automation</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge analytics">ANALYTICS</div>
+                    <p>Microsoft<br>Power BI AI</p>
+                </div>
+                <div class="tech-icon">
+                    <div class="tech-badge marketing">MARKETING</div>
+                    <p>Copy.ai AI<br>Copywriting</p>
                 </div>
             </div>
         </div>
