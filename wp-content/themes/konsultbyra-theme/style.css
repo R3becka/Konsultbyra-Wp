@@ -259,6 +259,11 @@ main {
 .value-prop p {
     font-size: 1.25rem;
     opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.value-prop p:last-child {
+    margin-bottom: 0;
 }
 
 /* Service Cards */

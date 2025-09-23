@@ -72,7 +72,12 @@ get_header(); ?>
     <section class="value-prop">
         <div class="container">
             <h2>Så hjälper vi dig samla in, analysera och använda din data för att växa</h2>
-            <p>Vi tar hand om hela kedjan – från datainsamling till actionable insights som driver tillväxt</p>
+            <p>De flesta företag använder sin data för att rapportera det som redan har hänt. Men data kan vara så mycket mer – den kan visa vägen framåt.</p>
+
+            <p>Vi hjälper er att strukturera, effektivisera och förädla er data med hjälp av AI-lösningar som faktiskt driver beslut, effektivitet och tillväxt.</p>
+
+            <p>När ni använder er data som en intelligent motor för utveckling, istället för bara en backspegel, och låter AI upptäcka mönster som människor lätt kan missa.
+Öppnas helt nya möjligheter för er verksamhet.</p>
         </div>
     </section>
 </main>
